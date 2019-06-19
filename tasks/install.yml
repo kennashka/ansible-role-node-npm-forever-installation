@@ -19,6 +19,9 @@
     - name: Upgrade system
       apt: upgrade=dist update_cache=yes
       
+    - name: Update system
+      apt: name=update update_cache=yes
+      
     - name: Install nodesource 
       shell: |
         curl -sL https://deb.nodesource.com/{{ node_version }} | sudo -E bash - && sudo apt-get install -y nodejs
