@@ -20,7 +20,7 @@
         curl -sL https://deb.nodesource.com/{{ node_version }} | sudo -E bash - && sudo apt-get install -y nodejs
 
     - name: Install Node.js
-      apt: name=nodejs state=installed update_cache=yes
+      apt: name=nodejs state=present update_cache=yes
 
     - name: Install npm
       apt: name=npm state=latest
