@@ -1,1 +1,22 @@
 
+galaxy_info:
+  author: Kennashka DeSilva
+  description: "Ansible Role to install Node.js, npm and forever js"
+  company: "Hactopia, LLC"
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.4
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+  galaxy_tags:
+    - system
+    - nodejs
+    - npm
+    - development
+    - web
+    - javascript
+    - js
+
+    
+

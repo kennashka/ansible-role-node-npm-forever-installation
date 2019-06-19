@@ -1,1 +1,30 @@
 
+#########################################################################################################
+# Author: Kennashka DeSilva 
+# mail@kennashka.com
+# June 13, 2019
+########################################################################################################
+
+---
+- hosts: addyourhost
+  remote_user: ubuntu
+  become: yes
+
+
+  vars:
+    node_version: "setup_12.x"
+
+  tasks:   
+    - name: Install nodesource 
+      shell: |
+        curl -sL https://deb.nodesource.com/{{ node_version }} | sudo -E bash - && sudo apt-get install -y nodejs
+
+    - name: Install Node.js
+      apt: name=nodejs state=installed update_cache=yes
+
+    - name: Install npm
+      apt: name=npm state=latest
+
+
+    - name: Install required npm packages
+      command: npm install forever -g
