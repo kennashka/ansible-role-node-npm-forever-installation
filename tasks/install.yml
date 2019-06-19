@@ -20,7 +20,7 @@
       apt: upgrade=dist update_cache=yes
       
     - name: Update system
-      apt: name=update update_cache=yes
+      apt: update_cache=yes
       
     - name: Install nodesource 
       shell: |
