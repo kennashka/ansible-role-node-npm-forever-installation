@@ -12,7 +12,7 @@
 
 
   vars:
-    node_version: "setup_12.x"
+    node_version: "setup_11.x"
 
   tasks:   
   
